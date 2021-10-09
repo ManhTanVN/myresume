@@ -1,0 +1,32 @@
+.contact {
+	&__details {
+		&-item {
+			display: flex;
+			align-items: center;
+			i {
+				display: inline-block;
+				text-align: center;
+				line-height: 44px;
+				width: 44px;
+				height: 44px;
+				font-size: $font-6;
+				background: #eef7ff;
+				color: $dark-Blue;
+				border-radius: 50%;
+				margin-right: 20px;
+			}
+
+			h5 {
+				font-size: $font-7;
+				color: $light-Black;
+				font-weight: 600;
+			}
+
+			span {
+				display: inline-block;
+				font-size: $font-2;
+				color: $light-Grey;
+			}
+		}
+	}
+}

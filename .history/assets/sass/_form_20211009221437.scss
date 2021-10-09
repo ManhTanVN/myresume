@@ -1,0 +1,22 @@
+.form {
+	display: flex;
+	flex-direction: column;
+
+	&__input {
+		display: block;
+		width: 100%;
+		padding: 6px 12px;
+		line-height: 1.5;
+		font-size: $font-1;
+		color: $light-Grey;
+		border-radius: 3px;
+
+		text-transform: capitalize;
+		&:not(:last-child) {
+			margin-bottom: 20px;
+		}
+	}
+
+	&__top {
+	}
+}

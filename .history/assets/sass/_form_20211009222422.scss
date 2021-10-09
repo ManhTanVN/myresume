@@ -1,0 +1,30 @@
+.form {
+	display: flex;
+	flex-direction: column;
+	color: $dark-Grey;
+
+	&__input {
+		display: block;
+		width: 100%;
+		padding: 6px 12px;
+		line-height: 2;
+		font-size: $font-2;
+		color: $light-Grey;
+		border: 1px solid $light-Grey;
+		border-radius: 3px;
+		// outline: 1px solid $lightDark-Blue;
+		outline: none;
+
+		text-transform: capitalize;
+		&:not(:last-child) {
+			margin-bottom: 20px;
+		}
+
+		&:focus {
+			border-color: $lightDark-Blue;
+		}
+	}
+
+	&__top {
+	}
+}

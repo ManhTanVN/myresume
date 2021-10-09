@@ -1,0 +1,12 @@
+.form {
+	display: flex;
+	flex-direction: column;
+
+	&__input {
+		display: block;
+		width: 100%;
+	}
+
+	&__top {
+	}
+}
