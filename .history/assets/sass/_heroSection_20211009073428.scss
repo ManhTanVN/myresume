@@ -1,0 +1,28 @@
+.hero {
+	background-image: url(../img/hero-bg.jpg);
+
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 100vh;
+	text-align: center;
+	position: relative;
+	box-shadow: inset 0 0 0 2000px rgba(128, 104, 104, 0.3);
+
+	&__wrapper {
+		color: $white;
+		font-size: $font-12;
+		h1 {
+			font-size: $font-13;
+			font-weight: 900;
+		}
+		h1 > span {
+			text-transform: uppercase;
+		}
+
+		p > span {
+			color: $dark-Blue;
+			font-weight: 700;
+		}
+	}
+}

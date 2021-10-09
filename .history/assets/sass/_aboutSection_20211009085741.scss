@@ -1,0 +1,26 @@
+.about {
+	padding: 60px 0;
+
+	&__content {
+	}
+
+	&__avatar {
+		img {
+			object-fit: cover;
+		}
+	}
+
+	&__information {
+	}
+
+	&__details {
+		&-col1 {
+		}
+
+		&-col2 {
+		}
+	}
+
+	> p {
+	}
+}

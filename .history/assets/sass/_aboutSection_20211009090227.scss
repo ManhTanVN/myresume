@@ -1,0 +1,29 @@
+.about {
+	padding: 60px 0;
+
+	&__content {
+	}
+
+	&__avatar {
+		max-height: 60%;
+		padding-top: 100%;
+		background-image: url(../img/avatar.jpg);
+		background-position: center center;
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+
+	&__information {
+	}
+
+	&__details {
+		&-col1 {
+		}
+
+		&-col2 {
+		}
+	}
+
+	> p {
+	}
+}

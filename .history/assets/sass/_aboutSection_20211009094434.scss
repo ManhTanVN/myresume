@@ -1,0 +1,60 @@
+.about {
+	padding: 60px 0;
+
+	&__content {
+		color: $dark-Grey;
+		font-weight: 500;
+	}
+
+	&__top {
+		width: 100%;
+	}
+
+	&__avatar {
+		width: 100%;
+		padding-top: 100%;
+		background-image: url(../img/avatar.jpg);
+		background-position: center center;
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+
+	&__information {
+		padding: 24px 12px 0;
+
+		h3 {
+			color: $light-Grey;
+			font-weight: 800;
+		}
+		p {
+			font-size: $font-4;
+			margin-bottom: 16px;
+		}
+	}
+
+	&__details {
+		list-style: none;
+		li {
+			display: inline-block;
+			margin-bottom: 20px;
+
+			i {
+				margin-right: 5px;
+				color: $lightDark-Blue;
+			}
+		}
+		span {
+			color: $light-Black;
+			font-weight: 600;
+			margin-right: 10px;
+		}
+		&-col1 {
+		}
+
+		&-col2 {
+		}
+	}
+
+	> p {
+	}
+}
