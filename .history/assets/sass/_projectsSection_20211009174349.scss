@@ -1,0 +1,16 @@
+.projects {
+	margin: 60px auto;
+
+	&__body {
+		button {
+			color: red;
+		}
+	}
+
+	&__items {
+		img {
+			max-width: 80%;
+			max-height: 300px;
+		}
+	}
+}

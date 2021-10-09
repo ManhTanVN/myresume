@@ -1,0 +1,19 @@
+.projects {
+	padding: 60px auto;
+	background: #eee;
+
+	&__body {
+		padding: auto;
+		width: 80%;
+		margin: auto;
+	}
+
+	&__items {
+		img {
+			height: 500px;
+			width: 100%;
+			object-fit: 80%;
+			object-position: center center;
+		}
+	}
+}

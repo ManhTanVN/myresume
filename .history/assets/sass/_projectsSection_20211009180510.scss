@@ -1,0 +1,24 @@
+.projects {
+	padding: 60px auto;
+
+	&__body {
+		margin: auto;
+
+		button {
+			color: red;
+		}
+	}
+
+	&__items {
+		img {
+			height: 500px;
+			width: 100%;
+			object-fit: 80%;
+			object-position: center center;
+		}
+
+		a {
+			color: red;
+		}
+	}
+}
