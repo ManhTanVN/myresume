@@ -35,8 +35,7 @@
   /**
    * Navbar links active state on scroll
    */
-  let navbarlinks = select('.navbar__li', true)
-  let firstnavlink = select('.navbar__li--1')
+  let navbarlinks = select('navbar__li', true)
   const navbarlinksActive = () => {
     let position = window.scrollY + 200
     navbarlinks.forEach(navbarlink => {
@@ -45,11 +44,6 @@
       if (!navbarlink.hash) return
       let section = select(navbarlink.hash)
       if (!section) return
-      if(position > 500) {
-        firstnavlink.classList.remove('active')
-      } else {
-        firstnavlink.classList.add('active')
-      }
       if (position >= section.offsetTop && position <= (section.offsetTop + section.offsetHeight)) {
         navbarlink.classList.add('active')
       } else {

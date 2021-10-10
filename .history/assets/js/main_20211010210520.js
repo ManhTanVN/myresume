@@ -38,7 +38,7 @@
   let navbarlinks = select('.navbar__li', true)
   let firstnavlink = select('.navbar__li--1')
   const navbarlinksActive = () => {
-    let position = window.scrollY + 200
+    let position = window.scrollY + 150
     navbarlinks.forEach(navbarlink => {
       console.log(navbarlink.hash)
 
