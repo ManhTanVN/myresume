@@ -399,7 +399,7 @@
                             <span></span>
                         </div>
                         <div class="form__wrapper form-group">
-                            <textarea id="userMessage" class="form__input" name="userMessage"
+                            <textarea id="userMessage" class="form__input" name="message"
                                     rows="5"
                                     placeholder="Your Message Here"></textarea>
                             
@@ -408,7 +408,6 @@
                     
                         <button type="submit" class="btn btn-primary">Send Message</button>
                     </form>
-                    <div class="contact__form-message">Your message has been sent! Thank you for your time</div>
                 </div>
                 
 
@@ -445,7 +444,7 @@
             Validator.isRequired('#userMessage'),
         ],
         onSubmit: function(data) {
-            // console.log(data)
+            console.log(data)
         }
     });
 

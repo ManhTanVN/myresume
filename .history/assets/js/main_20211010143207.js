@@ -231,6 +231,7 @@
           //call validate method while check if there are any errorMessages
           // if there is an error the result will be false
           let isValid = validate(inpuntElement, rule)
+          console.log(isValid)
 
           // if there is an error the default of formValid will be set to be false
           if (!isValid) {
@@ -239,48 +240,19 @@
 
 
         })
-
-        
+        // get value from User Input with element have attribute name and not with element disable
+        let formValueInput = formElement.querySelectorAll('[name]:not([disable])')
+        console.log(formValueInput)
 
         //handle the form submit with two conditions (Whether FormSubmit is valid or not)
         if (isFormValid) { //Form is valid
-
-          // get value from User Input with element have attribute name and not with element disable
-          // this varieble is a node list => let convert to Array for getting value
-          let formValueInput = formElement.querySelectorAll('[name]:not([disable])')
-
-          //SUBMIT WITH JAVASCRIPT
           if (typeof options.onSubmit === 'function') {
             
 
-            //getting value by convert to Array
-            let formValue = Array.from(formValueInput).reduce((values, input) => {
-              values[input.name] = input.value
-              return values
-            }, {})
-
-            //assign form value data to function onSubmit
-            options.onSubmit(formValue)
-
-            //clear value inputs
-            Array.from(formValueInput).forEach((el) => {
-              el.value = ''
-            })
-            // get element message DOM
-            let messageSuccess = select('.contact__form-message')
-            messageSuccess.classList.add('active')
-            setTimeout((() => {
-              messageSuccess.classList.remove('active')
-            }),6000)
-
-          } 
-          //SUBMIT BY DEFAULT
-          else {
-            formElement.submit()
           }
-
+          console.log('Valid')
         } else { //Form is not valid
-          return
+          console.log('inValid')
         }
       }
 

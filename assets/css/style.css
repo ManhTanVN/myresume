@@ -11,7 +11,6 @@ html {
 body {
   font-family: "Open Sans", sans-serif;
   color: #272829;
-  height: 500vh;
 }
 
 a {
@@ -66,6 +65,20 @@ h6 {
 @keyframes fillBar {
   from {
     width: 0;
+  }
+}
+@keyframes showAndHide {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
 .toggle {
@@ -415,6 +428,7 @@ h6 {
 
 .contact {
   margin: 60px auto;
+  padding-bottom: 60px;
 }
 .contact__details-item {
   display: flex;
@@ -453,6 +467,18 @@ h6 {
   color: #728394;
   line-height: 1;
 }
+.contact__form-message {
+  text-align: center;
+  color: #0563bb;
+  font-weight: 800;
+  padding: 15px;
+  display: none;
+  opacity: 0;
+}
+.contact__form-message.active {
+  display: block;
+  animation: showAndHide 6000ms forwards;
+}
 
 .form {
   display: flex;
@@ -474,6 +500,30 @@ h6 {
 .form__wrapper {
   position: relative;
 }
+.form__wrapper span {
+  position: absolute;
+  display: inline-block;
+  left: 0;
+  width: 100%;
+  font-size: 14px;
+  z-index: 99;
+  padding-left: 3px;
+  color: red;
+  top: 96%;
+  opacity: 0;
+  transition: all 300ms ease-in-out;
+}
+.form__wrapper span.active {
+  opacity: 1;
+}
+.form__wrapper span#textSpan {
+  top: 89%;
+}
+@media (min-width: 40rem) {
+  .form__wrapper span {
+    top: 66%;
+  }
+}
 .form__input {
   display: block;
   width: 100%;
@@ -484,13 +534,15 @@ h6 {
   border: 1px solid #728394;
   border-radius: 3px;
   outline: none;
-  text-transform: capitalize;
 }
 .form__input:not(:last-child) {
   margin-bottom: 20px;
 }
 .form__input:focus {
   border-color: #148af9;
+}
+.form__input.active {
+  border-color: red;
 }
 
 /*# sourceMappingURL=style.css.map */

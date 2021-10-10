@@ -245,13 +245,12 @@
         //handle the form submit with two conditions (Whether FormSubmit is valid or not)
         if (isFormValid) { //Form is valid
 
-          // get value from User Input with element have attribute name and not with element disable
-          // this varieble is a node list => let convert to Array for getting value
-          let formValueInput = formElement.querySelectorAll('[name]:not([disable])')
-
           //SUBMIT WITH JAVASCRIPT
           if (typeof options.onSubmit === 'function') {
             
+            // get value from User Input with element have attribute name and not with element disable
+            // this varieble is a node list => let convert to Array for getting value
+            let formValueInput = formElement.querySelectorAll('[name]:not([disable])')
 
             //getting value by convert to Array
             let formValue = Array.from(formValueInput).reduce((values, input) => {
@@ -262,18 +261,7 @@
             //assign form value data to function onSubmit
             options.onSubmit(formValue)
 
-            //clear value inputs
-            Array.from(formValueInput).forEach((el) => {
-              el.value = ''
-            })
-            // get element message DOM
-            let messageSuccess = select('.contact__form-message')
-            messageSuccess.classList.add('active')
-            setTimeout((() => {
-              messageSuccess.classList.remove('active')
-            }),6000)
-
-          } 
+          }
           //SUBMIT BY DEFAULT
           else {
             formElement.submit()

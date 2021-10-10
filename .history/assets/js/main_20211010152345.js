@@ -264,14 +264,8 @@
 
             //clear value inputs
             Array.from(formValueInput).forEach((el) => {
-              el.value = ''
+              console.log(el)
             })
-            // get element message DOM
-            let messageSuccess = select('.contact__form-message')
-            messageSuccess.classList.add('active')
-            setTimeout((() => {
-              messageSuccess.classList.remove('active')
-            }),6000)
 
           } 
           //SUBMIT BY DEFAULT

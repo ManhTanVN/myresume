@@ -166,9 +166,11 @@
 
 
     // get form element
+
     let formElement = select(options.form)
 
     // collect rules for validating
+
     let  collectRules = {}
 
     // handle validate for each rule  when there are any events
@@ -208,8 +210,6 @@
 
       }
 
-      return !errorMessage
-
     }
 
 
@@ -221,67 +221,14 @@
       formElement.onsubmit = (e) => {
         e.preventDefault();
 
-        // the default of form is having no error
-        let isFormValid = true
-
         //validate when submit
         options.rules.forEach(rule => {
           let inpuntElement = formElement.querySelector(rule.selector)
-
-          //call validate method while check if there are any errorMessages
-          // if there is an error the result will be false
-          let isValid = validate(inpuntElement, rule)
-
-          // if there is an error the default of formValid will be set to be false
-          if (!isValid) {
-            isFormValid = false
-          }
+          validate(inpuntElement, rule)
 
 
         })
-
         
-
-        //handle the form submit with two conditions (Whether FormSubmit is valid or not)
-        if (isFormValid) { //Form is valid
-
-          // get value from User Input with element have attribute name and not with element disable
-          // this varieble is a node list => let convert to Array for getting value
-          let formValueInput = formElement.querySelectorAll('[name]:not([disable])')
-
-          //SUBMIT WITH JAVASCRIPT
-          if (typeof options.onSubmit === 'function') {
-            
-
-            //getting value by convert to Array
-            let formValue = Array.from(formValueInput).reduce((values, input) => {
-              values[input.name] = input.value
-              return values
-            }, {})
-
-            //assign form value data to function onSubmit
-            options.onSubmit(formValue)
-
-            //clear value inputs
-            Array.from(formValueInput).forEach((el) => {
-              el.value = ''
-            })
-            // get element message DOM
-            let messageSuccess = select('.contact__form-message')
-            messageSuccess.classList.add('active')
-            setTimeout((() => {
-              messageSuccess.classList.remove('active')
-            }),6000)
-
-          } 
-          //SUBMIT BY DEFAULT
-          else {
-            formElement.submit()
-          }
-
-        } else { //Form is not valid
-          return
-        }
       }
 
       options.rules.forEach(rule => {
@@ -290,6 +237,7 @@
         
         
         // add rules to collectRules
+
         if(Array.isArray(collectRules[rule.selector])) {
           collectRules[rule.selector].push(rule.check)
         } else {
@@ -337,7 +285,7 @@
       check: (value) => {
         let regex = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
 
-        return regex.test(value) ? undefined : `Your email is not valid`
+        return regex.test(value) ? undefined : `Your email is invalid. Please check again`
         
       }
     }

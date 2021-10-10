@@ -386,29 +386,28 @@
                     <form id="form-1" class="form" action="">
                         <div class="form__top">
                             <div class="form__wrapper form-group form__top-col">
-                                <input name='userName' id="userName" class="form__input" type="text" placeholder="Your Name">
-                                <span class=""></span>
+                                <input id="userName" class="form__input" type="text" placeholder="your name">
+                                <span class="active">Your name here</span>
                             </div>
                             <div class="form__wrapper form-group  form__top-col">
-                                <input name='userEmail' id="userEmail" class="form__input" type="email" placeholder="Your Email">
+                                <input id="userEmail" class="form__input" type="email" placeholder="your email">
                                 <span></span>
                             </div>
                         </div>
                         <div class="form__wrapper form-group">
-                            <input name='userSubject' id="userSubject" class="form__input" type="text" placeholder="Subject">
+                            <input id="userSubject" class="form__input" type="text" placeholder="subject">
                             <span></span>
                         </div>
                         <div class="form__wrapper form-group">
-                            <textarea id="userMessage" class="form__input" name="userMessage"
+                            <textarea id="userMessage" class="form__input" name="message"
                                     rows="5"
-                                    placeholder="Your Message Here"></textarea>
+                                    placeholder="Your message here"></textarea>
                             
                             <span id= "textSpan"></span>
                         </div>
                     
                         <button type="submit" class="btn btn-primary">Send Message</button>
                     </form>
-                    <div class="contact__form-message">Your message has been sent! Thank you for your time</div>
                 </div>
                 
 
@@ -439,14 +438,8 @@
         form: "#form-1",
         rules: [
             Validator.isRequired('#userName'),
-            Validator.isRequired('#userEmail'),
-            Validator.isEmail('#userEmail'),
-            Validator.isRequired('#userSubject'),
-            Validator.isRequired('#userMessage'),
-        ],
-        onSubmit: function(data) {
-            // console.log(data)
-        }
+            Validator.isEmail('#userEmail')
+        ]
     });
 
 </script>

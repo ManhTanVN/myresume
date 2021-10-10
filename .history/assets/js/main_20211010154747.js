@@ -271,7 +271,7 @@
             messageSuccess.classList.add('active')
             setTimeout((() => {
               messageSuccess.classList.remove('active')
-            }),6000)
+            }),1000)
 
           } 
           //SUBMIT BY DEFAULT
