@@ -340,6 +340,7 @@ h6 {
   font-weight: 600;
   margin-right: 10px;
 }
+
 .processBar {
   margin: 60px auto;
 }
@@ -516,13 +517,16 @@ h6 {
 .form__wrapper span.active {
   opacity: 1;
 }
-.form__wrapper span#textSpan {
-  top: 89%;
-}
 @media (min-width: 40rem) {
   .form__wrapper span {
     top: 66%;
   }
+}
+.form__wrapper span#textSpan1 {
+  top: 66%;
+}
+.form__wrapper span#textSpan2 {
+  top: 89%;
 }
 .form__input {
   display: block;
