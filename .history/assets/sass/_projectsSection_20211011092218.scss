@@ -1,0 +1,22 @@
+.projects {
+	padding: 60px auto;
+
+	&__body {
+	}
+
+	&__items {
+		img {
+			height: 500px;
+			width: 100%;
+			object-fit: contain;
+			object-position: center center;
+		}
+
+		a {
+			color: #2500ff;
+			text-transform: capitalize;
+			font-weight: 600;
+			font-size: 14px;
+		}
+	}
+}

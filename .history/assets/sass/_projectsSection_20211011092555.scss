@@ -1,0 +1,24 @@
+.projects {
+	padding: 60px auto;
+
+	&__body {
+	}
+
+	&__items {
+		box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+		background: rgba(149, 157, 165, 0.2);
+		img {
+			height: 500px;
+			width: 100%;
+			object-fit: contain;
+			object-position: center center;
+		}
+
+		a {
+			color: $dark-Blue;
+			text-transform: capitalize;
+			font-weight: 600;
+			font-size: 14px;
+		}
+	}
+}

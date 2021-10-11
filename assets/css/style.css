@@ -414,6 +414,11 @@ h6 {
 .projects {
   padding: 60px auto;
 }
+.projects__items .carousel-caption {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  background: rgba(149, 157, 165, 0.2);
+  border-radius: 15px;
+}
 .projects__items img {
   height: 500px;
   width: 100%;
@@ -421,10 +426,10 @@ h6 {
   object-position: center center;
 }
 .projects__items a {
-  color: red;
-  text-transform: uppercase;
-  font-weight: 700;
-  font-size: 22px;
+  color: #0563bb;
+  text-transform: capitalize;
+  font-weight: 600;
+  font-size: 14px;
 }
 
 .contact {
